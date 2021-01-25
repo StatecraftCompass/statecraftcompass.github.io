@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8"/>
+       <title>Political Compass Project</title>
+       <link rel='shortcut icon' type='image/x-icon' href='icon.ico' />
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   </head>
+   <style>
+       .questions {
+           padding-top: 10px;
+           padding-bottom: 5px;
+       }
+
+   </style>
+
+   <body>
+   <div class="row">
+       <div class="alert alert-primary col" role="alert">
+           <h4> Part 4/5 | Foreign Relations  </h4>
+       </div>
+   </div><div class="row">
+       <div class="col-md"></div>
+       <div id="main" class="col-sm-10 offset-sm-1 col-md-8">
+           <!-- You already knows what goes here. !-->
+
+       <div class="questions" id="que1">
+           <p>How much funding should the military have?</p>
+           <select class="custom-select" id="selector1">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Enough funding to defend its nation when combined with their allies</option>
+               <option value=0>Enough funding to defend its nation independently</option>
+               <option value=-1>Enough funding to defend its nation, and invade others if required</option>
+
+           </select>
+
+       </div>
+       <div class="questions" id="que2">
+           <p>How should the state respond to terrorist threats?</p>
+
+           <select class="custom-select" id="selector2">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Negotiate when applicable</option>
+               <option value=0>Never negotiate</option>
+               <option value=-1>Never negotiate, and prevent third parties (such as the family of hostages) from negotiating on their own behalf</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que3">
+           <p>Should the nation possess nukes?</p>
+
+           <select class="custom-select" id="selector3">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>Yes, and some should be deployed (ready to be immediately launched)</option>
+               <option value=0>Yes, but none should be deployed</option>
+               <option value=1>No</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que4">
+           <p>How strong should the borders to immigration be?</p>
+
+           <select class="custom-select" id="selector4">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Open borders</option>
+               <option value=0.5>Secure borders (requires criminal background check and waiting queue)</option>
+               <option value=-0.5>Strong borders (requires cultural assimilation)</option>
+               <option value=-1>Closed borders</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que5">
+           <p>How should refugees be accepted in comparison to other immigrants?</p>
+
+           <select class="custom-select" id="selector5">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Accepted at a higher rate than normal immigrants (as they are in more desperate need of a home)</option>
+               <option value=0.5>Accepted at the same rate as other immigrants</option>
+               <option value=-0.5>Accepted at a lower rate than normal immigrants (as they pose a higher threat)</option>
+               <option value=-1>Should not be accepted at all</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que6">
+           <p>How should the nation treat international intelligence agencies like INTERPOL (crime detection) and ISC (scientific research)?</p>
+
+           <select class="custom-select" id="selector6">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Cooperate with both</option>
+               <option value=0>Cooperate with ISC, but not INTERPOL</option>
+               <option value=0>Cooperate with INTERPOL, but not ISC</option>
+               <option value=-1>Cooperate with neither</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que7">
+           <p>Should the United Nations exist?</p>
+
+           <select class="custom-select" id="selector12">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Yes, and exist as a way to enforce international law</option>
+               <option value=0>Yes, but only exist as a platform to securely discuss global politics</option>
+               <option value=-1>No, it should not exist</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que8">
+           <p>Should the nation take part in International Unions like the EU?</p>
+
+           <select class="custom-select" id="selector10">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>No</option>
+               <option value=1>Yes</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que9">
+           <p>Which countries should be given Foreign Aid funding?</p>
+
+           <select class="custom-select" id="selector9">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>No country</option>
+               <option value=0>Countries that will help us in the long term</option>
+               <option value=1>Countries in need of our help, who may not neccessarily provide anything in return</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que10">
+           <p>When should warcrimes be prosecuted?</p>
+
+           <select class="custom-select" id="selector8">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Always</option>
+               <option value=0>When done against civilians, but not when done against enemy combatants</option>
+               <option value=-1>Never</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que11">
+           <p>When should protectionism (imports tariffs, trade quotas, trade bans) be enacted against another country?</p>
+
+           <select class="custom-select" id="selector11">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Never</option>
+               <option value=0>Only if we are at conflict with the other country</option>
+               <option value=-1>If we are at conflict or the other country does not align with our political interests</option>
+               <option value=-1>If we are conflict or if the imports of the other country strongly threatens local production</option>
+               <option value=-1>All of the above</option>
+           </select>
+       </div>
+       <div class="questions" id="que12">
+           <p>If a business if founded in our country, but operates in another with lower tax rates, who does it owe taxes to?</p>
+
+           <select class="custom-select" id="selector7">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Only the country where it is operating</option>
+               <option value=0.5>Both the country where it is operating, as well as a reduced tax rate to the nation of origin</option>
+               <option value=-0.5>Both the country where it is operating, as well as the full tax rate to the nation of origin</option>
+               <option value=-1>Both the country where it is operating, as well as an inflated tax rate to the nation of origin</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que13">
+           <p>If accepted into the country, should first generation immigrants be allowed to become members of government?</p>
+
+           <select class="custom-select" id="selector13">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Yes</option>
+               <option value=-1>No</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que14">
+           <p>How should imperialism (Reshaping the ideology of another country to reflect our own, when not in direct conflict) be utilized?</p>
+
+           <select class="custom-select" id="selector14">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Our nation should not imperialize other countries</option>
+               <option value=0>Our nation should persuade other countries to adopt our systems and ideology</option>
+               <option value=-1>Our nation should force other countries to adopt our systems and ideology if neccessarry</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que15">
+           <p>How should colonialism (Aquiring land from weak, undevelopped countries to be used for profit by ours) be utilized?</p>
+
+           <select class="custom-select" id="selector15">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Our nation should be prohibited from colonizing</option>
+               <option value=0.5>The state should be prohibited from colonizing, but corporations shouldn't</option>
+               <option value=-0.5>The state and corporations should colonize, but only through consensual deals</option>
+               <option value=-1>Our nation should seize and colonize other countries by force</option>
+
+           </select>
+       </div>
+           <br>
+           <div class="progress">
+               <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5">Page 4 of 5</div>
+           </div>
+           <br>
+
+           <a href="quiz5culture.html"><button id="submit" class="btn btn-primary btn-lg btn-block">Submit</button></a>
+
+
+   </div>
+       <div class="col-md"></div></div>
+   </body>
+
+     <script>
+       window.onload = start;
+       document.getElementById("submit").onclick = ulclick;
+       document.getElementById("marxism").onclick = alertClick;
+
+
+
+
+
+
+       function start()
+       {
+           //This is where you call functions and put general document editing code.
+           //var select = document.getElementById("selector1");
+           //alert ( select.options[select.selectedIndex].value)
+
+           createPara("", "p1")
+       }
+
+       function alertClick()
+         {
+             alert("Communism in this context being the concept of a classless, stateless and moneyless society.")
+         }
+
+        function createPara(text, id)
+               //Very imporant function to reduce time wasted making paragraphs manually!
+           {
+               var para = document.createElement("p");
+               var t = document.createTextNode(text);
+               para.appendChild(t);
+               document.getElementById("main").appendChild(para);
+               para.id = id;
+           }
+
+       function ulclick()
+         {
+             var scoreFor = Math.round(((calculate()+15)/30)*100);
+             var scoreForop = 100-(Math.round(((calculate()+15)/30)*100));
+
+             sessionStorage.setItem('scoreFor', scoreFor)
+             sessionStorage.setItem('scoreForop', scoreForop)
+
+
+         }
+       function calculate()
+       {
+
+           var select = document.getElementById("selector1");
+           var select2 = document.getElementById("selector2");
+           var select3 = document.getElementById("selector3");
+           var select4 = document.getElementById("selector4");
+           var select5 = document.getElementById("selector5");
+           var select6 = document.getElementById("selector6");
+           var select7 = document.getElementById("selector7");
+           var select8 = document.getElementById("selector8");
+           var select9 = document.getElementById("selector9");
+           var select10 = document.getElementById("selector10");
+           var select11 = document.getElementById("selector11");
+           var select12 = document.getElementById("selector12");
+           var select13 = document.getElementById("selector13");
+           var select14 = document.getElementById("selector14");
+           var select15 = document.getElementById("selector15");
+
+          return parseFloat(select.options[select.selectedIndex].value)+ parseFloat(select2.options[select2.selectedIndex].value) + parseFloat(select3.options[select3.selectedIndex].value) + parseFloat(select4.options[select4.selectedIndex].value) + parseFloat(select5.options[select5.selectedIndex].value) + parseFloat(select6.options[select6.selectedIndex].value) + parseFloat(select7.options[select7.selectedIndex].value) + parseFloat(select8.options[select8.selectedIndex].value) + parseFloat(select9.options[select9.selectedIndex].value) + parseFloat(select10.options[select10.selectedIndex].value) + parseFloat(select11.options[select11.selectedIndex].value) + parseFloat(select12.options[select12.selectedIndex].value) + parseFloat(select13.options[select13.selectedIndex].value) + parseFloat(select14.options[select14.selectedIndex].value) + parseFloat(select15.options[select15.selectedIndex].value);
+
+
+       };
+
+
+
+
+
+       //The rest of the functions go here
+   </script>
+   <script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(101050272); }catch(e){}</script>
+
+</html>

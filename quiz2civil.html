@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8"/>
+       <title>Political Compass Project</title>
+       <link rel='shortcut icon' type='image/x-icon' href='icon.ico' />
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   </head>
+   <style>
+       .questions {
+           padding-top: 10px;
+           padding-bottom: 5px;
+       }
+
+   </style>
+
+   <body>
+   <div class="row">
+       <div class="alert alert-primary col" role="alert">
+           <h4> Part 2/5 | Personal Freedoms  </h4>
+       </div>
+   </div><div class="row">
+       <div class="col-md"></div>
+       <div id="main" class="col-sm-10 offset-sm-1 col-md-8">
+           <!-- You already knows what goes here. !-->
+
+       <div class="questions" id="que1">
+           <p>What type of firearms should responsible citizens have access to?</p>
+           <select class="custom-select" id="selector1">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>None</option>
+               <option value=-0.5>Bolt/Pump action only</option>
+               <option value=0.5>Bolt/Pump action and Handguns</option>
+               <option value=0.5>Bolt/Pump action and Assault weapons</option>
+               <option value=1>Bolt/Pump action, Handguns, and Assault weapons</option>
+           </select>
+
+       </div>
+       <div class="questions" id="que2">
+           <p>How should hard drugs, such as cocaine, be regulated?</p>
+           <select class="custom-select" id="selector2">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>Fully Illegal</option>
+               <option value=0>Decriminalized (legal to use/own, illegal to sell)</option>
+               <option value=1>Fully Legal</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que3">
+           <p>How should prostitution be regulated?</p>
+           <select class="custom-select" id="selector3">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>Fully Illegal</option>
+               <option value=0>Decriminalized (legal to perform and purchase, illegal to profit from via third party [traffickers, brothels, pimps])</option>
+               <option value=1>Fully Legal</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que4">
+           <p>How should vaccines be handled?</p>
+
+           <select class="custom-select" id="selector4">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Optional</option>
+               <option value=0.5>Optional, but refusers should be added to public watchlists</option>
+               <option value=-1>Mandatory</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que5">
+           <p>How should organ donation be handled after death?</p>
+
+           <select class="custom-select" id="selector5">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Opt - In</option>
+               <option value=-1>Opt - Out</option>
+               <option value=-1>Mandatory</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que6">
+           <p>Beyond government buldings, where should public surveillance (patrol officers and cameras) be positioned?</p>
+
+           <select class="custom-select" id="selector6">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Nowhere</option>
+               <option value=0>High crime areas</option>
+               <option value=-1>Most street corners</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que7">
+           <p>Who should be eligable to be wiretapped (electronically spied on without consent) by police?</p>
+
+           <select class="custom-select" id="selector7">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>No one</option>
+               <option value=0>Convicted felons only</option>
+               <option value=-1>Anyone greenlit for investigation</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que8">
+           <p>What should the repercussions be for a murder witness who is intentionally being uncooperative with police detectives?</p>
+
+           <select class="custom-select" id="selector8">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>No charges</option>
+               <option value=0>Criminal charge depending on motivation for noncooperation</option>
+               <option value=-1>Criminal charge regardless of motivation</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que9">
+           <p>Until what age should classroom attendance be mandatory for children?</p>
+
+           <select class="custom-select" id="selector9">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Age 0</option>
+               <option value=0>Age 13</option>
+               <option value=-1>Age 18 or graduation</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que10">
+           <p>Should a national school curriculum exist?</p>
+
+           <select class="custom-select" id="selector10">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>No</option>
+               <option value=0>Yes, but should only exist to help kids gets jobs</option>
+               <option value=-1>Yes, and it should include ideological (patriotic, moral, or religious) components</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que11">
+           <p>How should military service be handled?</p>
+
+           <select class="custom-select" id="selector11">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Always optional</option>
+               <option value=0>Optional, unless in the event of a major war</option>
+               <option value=-1>Mandatory for all citizens for at least a year</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que12">
+           <p>When should curfews (martial law for terrorism, lockdowns for pandemics) be enacted?</p>
+
+           <select class="custom-select" id="selector12">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Never enacted</option>
+               <option value=0>Enacted when necessary, but for constitutionally limited durations with cooldown periods inbetween</option>
+               <option value=-1>Enacted when necessary, for as long as necessary</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que13">
+           <p>How should public burning of the national flag be dealt with?</p>
+
+           <select class="custom-select" id="selector13">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Legal</option>
+               <option value=0>Illegal, except for those who have earned the right to disrespect the nation (ex: veterans)</option>
+               <option value=-1>Illegal</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que14">
+           <p>How should advocacy of dangerous ideologies (fascism if you are leftwing, communism if you are rightwing) be handled by the government?</p>
+
+           <select class="custom-select" id="selector14">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Uncensored</option>
+               <option value=-0.5>Censored from political media (news networks and political candidates)</option>
+               <option value=-1>Censored from political media and peer-peer media (social media, university events, etc.)</option>
+           </select>
+       </div>
+       <div class="questions" id="que15">
+           <p>How should the spread of false facts, misinformation, and conspiracy theories from individuals or organizations with a significant following be handled by the government?</p>
+
+           <select class="custom-select" id="selector15">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Uncensored</option>
+               <option value=0>Forced to air with a "fake news" disclaimer</option>
+               <option value=-1>Censored</option>
+
+           </select>
+       </div>
+           <br>
+           <div class="progress">
+               <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5">Page 2 of 5</div>
+           </div>
+           <br>
+
+           <a href="quiz3economics.html"><button id="submit" class="btn btn-primary btn-lg btn-block">Submit</button></a>
+
+
+   </div>
+       <div class="col-md"></div></div>
+   </body>
+
+     <script>
+       window.onload = start;
+       document.getElementById("submit").onclick = ulclick;
+       document.getElementById("marxism").onclick = alertClick;
+
+
+
+
+
+
+       function start()
+       {
+           //This is where you call functions and put general document editing code.
+           //var select = document.getElementById("selector1");
+           //alert ( select.options[select.selectedIndex].value)
+
+           createPara("", "p1")
+       }
+
+       function alertClick()
+         {
+             alert("Communism in this context being the concept of a classless, stateless and moneyless society.")
+         }
+
+        function createPara(text, id)
+               //Very imporant function to reduce time wasted making paragraphs manually!
+           {
+               var para = document.createElement("p");
+               var t = document.createTextNode(text);
+               para.appendChild(t);
+               document.getElementById("main").appendChild(para);
+               para.id = id;
+           }
+
+       function ulclick()
+         {
+             var scoreCiv = Math.round(((calculate()+15)/30)*100);
+             var scoreCivop = 100-(Math.round(((calculate()+15)/30)*100));
+
+             sessionStorage.setItem('scoreCiv', scoreCiv)
+             sessionStorage.setItem('scoreCivop', scoreCivop)
+         }
+       function calculate()
+       {
+
+           var select = document.getElementById("selector1");
+           var select2 = document.getElementById("selector2");
+           var select3 = document.getElementById("selector3");
+           var select4 = document.getElementById("selector4");
+           var select5 = document.getElementById("selector5");
+           var select6 = document.getElementById("selector6");
+           var select7 = document.getElementById("selector7");
+           var select8 = document.getElementById("selector8");
+           var select9 = document.getElementById("selector9");
+           var select10 = document.getElementById("selector10");
+           var select11 = document.getElementById("selector11");
+           var select12 = document.getElementById("selector12");
+           var select13 = document.getElementById("selector13");
+           var select14 = document.getElementById("selector14");
+           var select15 = document.getElementById("selector15");
+
+          return parseFloat(select.options[select.selectedIndex].value)+ parseFloat(select2.options[select2.selectedIndex].value) + parseFloat(select3.options[select3.selectedIndex].value) + parseFloat(select4.options[select4.selectedIndex].value) + parseFloat(select5.options[select5.selectedIndex].value) + parseFloat(select6.options[select6.selectedIndex].value) + parseFloat(select7.options[select7.selectedIndex].value) + parseFloat(select8.options[select8.selectedIndex].value) + parseFloat(select9.options[select9.selectedIndex].value) + parseFloat(select10.options[select10.selectedIndex].value) + parseFloat(select11.options[select11.selectedIndex].value) + parseFloat(select12.options[select12.selectedIndex].value) + parseFloat(select13.options[select13.selectedIndex].value) + parseFloat(select14.options[select14.selectedIndex].value) + parseFloat(select15.options[select15.selectedIndex].value);
+
+
+       };
+
+
+
+
+
+       //The rest of the functions go here
+   </script>
+   <script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(101050272); }catch(e){}</script>
+
+</html>

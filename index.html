@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Political Compass Project</title>
+        <link rel='shortcut icon' type='image/x-icon' href='icon.ico' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+
+    <script>
+        window.onload = start;
+
+        function start()
+        {
+            //This is where you call functions and put general document editing code.
+
+        }
+
+         function createPara(text, id)
+                //Very imporant function to reduce time wasted making paragraphs manually!
+            {
+                var para = document.createElement("p");
+                var t = document.createTextNode(text);
+                para.appendChild(t);
+                document.getElementById("main").appendChild(para);
+                para.id = id;
+            }
+        //The rest of the functions go here
+
+
+    </script>
+    <script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(101050272); }catch(e){}</script>
+
+
+    <body class="container">
+
+    <div class="jumbotron">
+        <h1 class="display-4">Statecraft Compass Test</h1>
+        <p class="lead">A five dimensional political compass</p>
+        <hr class="my-4">
+        <p>Statecraft is, in essence, a political quiz that attempts to assign percentages for five different political axes. You will be presented by a question, and then you will answer with your opinion on the question. Each answer will slightly affect your scores. At the end of the quiz, your answers will be compared to the maximum possible for each value, thus giving you a percentage. There is a total of 61 questions. Answer as though you are creating your ideal society, rather than reflecting on the society you live in now. Answer honestly!</p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="3"></div>
+        </div>
+        <br>
+
+        <a href="quiz1governing.html"><button id="submit" class="btn btn-primary btn-lg btn-block">Begin!</button></a>
+
+
+    </div>
+
+    </body>
+
+</html>
+
+<!--  Political compass webpage written in HTML and JS.
+
+    Copyright (C) 2017  Sapply
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    Contact info:
