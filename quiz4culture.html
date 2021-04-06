@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8"/>
+       <title>Political Compass Project</title>
+       <link rel='shortcut icon' type='image/x-icon' href='icon.ico' />
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   </head>
+   <style>
+       .questions {
+           padding-top: 10px;
+           padding-bottom: 5px;
+       }
+
+       #textt{
+         font-family: "Uni Sans Heavy";
+         color: #839496;
+         font-size: 20px;
+       }
+
+   </style>
+
+   <body style = background-color:#36393F>
+
+     <center>
+     <img src="cul.png" alt="Political compass values" width = "15%">
+     </center>
+
+<div class="row">
+       <div class="col-md"></div>
+       <div id="main" class="col-sm-10 offset-sm-1 col-md-8">
+           <!-- You already knows what goes here. !-->
+
+
+       <div class="questions" id="que1">
+           <p id='textt'>When should abortion be legal?</p>
+           <select class="custom-select" id="selector1">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>Never</option>
+               <option value=-0.5>Only if the mother's life is in danger</option>
+               <option value=0.5>For rape or socioeconomic reasons</option>
+               <option value=1>Always</option>
+
+           </select>
+
+       </div>
+       <div class="questions" id="que2">
+           <p id='textt'>What sexualties should be socially acceptable?</p>
+
+           <select class="custom-select" id="selector2">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>Heterosexuality only</option>
+               <option value=0>Heterosexuality and Homosexuality</option>
+               <option value=1>Heterosexuality, Homosexuality, and Transexuality</option>
+
+
+           </select>
+       </div>
+       <div class="questions" id="que3">
+           <p id='textt'>When should sex between two consenting adults be socially acceptable?</p>
+
+           <select class="custom-select" id="selector3">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>Only if the two are married</option>
+               <option value="0">Only if the two are in a romantic relationship</option>
+               <option value=1>Under most circumstances</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que4">
+           <p id='textt'>What is your stance on Organized religion (christianity, islam, judaism, buddhism)?</p>
+
+           <select class="custom-select" id="selector4">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>Good, and should be followed by as many people as possible</option>
+               <option value=-0.5>Good for me, but not for everybody</option>
+               <option value=0.5>Not for me, but good for others</option>
+               <option value=1>Bad, and should be rejected by as many people as possible</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que5">
+           <p id='textt'>What is your stance on race?</p>
+
+           <select class="custom-select" id="selector5">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Not a predictor or cause of behaviour</option>
+               <option value=0>Predictor of behaviour, but not a cause (cultural, not genetic)</option>
+               <option value=-1>Cause of behaviour</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que6">
+           <p id='textt'>What should be done with Controversial Historic monuments (ie statues of famous war criminals)?</p>
+
+           <select class="custom-select" id="selector6">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>Preserved</option>
+               <option value=0>Relocated away from public view in a park, museam, or auction</option>
+               <option value=1>Demolished</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que7">
+           <p id='textt'>What should the quality of life be like for prisoners?</p>
+
+           <select class="custom-select" id="selector7">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Recreational and comforting for all convicts</option>
+               <option value=0>Reacreational and comforting for nonviolent convicts (ex: white collar criminals)</option>
+               <option value=-1>Punitive and strict for all convicts</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que8">
+           <p id='textt'>How strong should the borders to immigration be??</p>
+
+           <select class="custom-select" id="selector8">
+              <option selected="selected" value="0">[Neutral / Unsure]</option>
+              <option value=1>Open borders</option>
+              <option value=0.5>Secure borders (requires criminal background check and waiting queue)</option>
+              <option value=-0.5>Strong borders (requires cultural assimilation and/or language fluency and/or education, etc.)</option>
+              <option value=-1>Closed borders</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que9">
+           <p id='textt'>What is your stance on gender?</p>
+
+           <select class="custom-select" id="selector9">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=0>Men and women are different, but should be treated equally.</option>
+               <option value=-1>Men and women are different, and men should be taken more seriously</option>
+               <option value=1>Men and women are different, and women should be taken more seriously</option>
+               <option value=1>There is no difference between men and women</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que10">
+           <p id='textt'>What punishments should be applicable to the most serious offenders?</p>
+
+           <select class="custom-select" id="selector10">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>Life in prison and the death penalty</option>
+               <option value=0>Life in prison, but not the death penalty</option>
+               <option value=-1>The death penalty, but not life in prison</option>
+               <option value=1>Neither life in prison nor the death penalty</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que11">
+           <p id='textt'>What is your stance on different cultures?</p>
+
+           <select class="custom-select" id="selector11">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>No culture is objectively better than another</option>
+               <option value=-1>Some cultures are objectively better than others</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que12">
+           <p id='textt'>Should animal rights exist?</p>
+
+           <select class="custom-select" id="selector12">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Yes</option>
+               <option value=0>Yes, but only for reacreational industries (sport hunting) and not practical ones (farming)</option>
+               <option value=-1>No</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que13">
+           <p id='textt'>Besides public nudity, what appearances should society look down on with disgust?</p>
+
+           <select class="custom-select" id="selector13">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=0>Obesity</option>
+               <option value=0>Pea cocking (colorful hair, provacative dressing, vanity wear)</option>
+               <option value=-1>Obesity and Pea cocking</option>
+               <option value=1>None of the above</option>
+
+           </select>
+       </div>
+       <div class="questions" id="que14">
+           <p id='textt'>What is the best solution to solve mental health issues such as depression or anxiety?</p>
+
+           <select class="custom-select" id="selector14">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=0>Therapy, but not medication</option>
+               <option value=1>Therapy and medication</option>
+               <option value=-1>Sucking it up and becoming stronger</option>
+           </select>
+       </div>
+
+       <div class="questions" id="que15">
+           <p id='textt'>Should parents be allowed to force their kids to learn particular sports and/or instruments?</p>
+
+           <select class="custom-select" id="selector15">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=-1>Yes</option>
+               <option value=1>No</option>
+
+           </select>
+       </div>
+           <br>
+           <div class="progress">
+               <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">Page 4 of 4</div>
+           </div>
+           <br>
+
+           <a href="results.html"><button id="submit" class="btn btn-primary btn-lg btn-block">End Quiz</button></a>
+
+
+   </div>
+       <div class="col-md"></div></div>
+   </body>
+
+     <script>
+       window.onload = start;
+       document.getElementById("submit").onclick = ulclick;
+       document.getElementById("marxism").onclick = alertClick;
+
+
+
+
+
+
+       function start()
+       {
+           //This is where you call functions and put general document editing code.
+           //var select = document.getElementById("selector1");
+           //alert ( select.options[select.selectedIndex].value)
+
+           createPara("", "p1")
+       }
+
+       function alertClick()
+         {
+             alert("Communism in this context being the concept of a classless, stateless and moneyless society.")
+         }
+
+        function createPara(text, id)
+               //Very imporant function to reduce time wasted making paragraphs manually!
+           {
+               var para = document.createElement("p");
+               var t = document.createTextNode(text);
+               para.appendChild(t);
+               document.getElementById("main").appendChild(para);
+               para.id = id;
+           }
+
+       function ulclick()
+         {
+             var scoreCul = Math.round(((calculate()+15)/30)*100);
+             var scoreCulop = 100-(Math.round(((calculate()+15)/30)*100));
+
+             sessionStorage.setItem('scoreCul', scoreCul)
+             sessionStorage.setItem('scoreCulop', scoreCulop)
+
+
+         }
+       function calculate()
+       {
+
+           var select = document.getElementById("selector1");
+           var select2 = document.getElementById("selector2");
+           var select3 = document.getElementById("selector3");
+           var select4 = document.getElementById("selector4");
+           var select5 = document.getElementById("selector5");
+           var select6 = document.getElementById("selector6");
+           var select7 = document.getElementById("selector7");
+           var select8 = document.getElementById("selector8");
+           var select9 = document.getElementById("selector9");
+           var select10 = document.getElementById("selector10");
+           var select11 = document.getElementById("selector11");
+           var select12 = document.getElementById("selector12");
+           var select13 = document.getElementById("selector13");
+           var select14 = document.getElementById("selector14");
+           var select15 = document.getElementById("selector15");
+
+          return parseFloat(select.options[select.selectedIndex].value)+ parseFloat(select2.options[select2.selectedIndex].value) + parseFloat(select3.options[select3.selectedIndex].value) + parseFloat(select4.options[select4.selectedIndex].value) + parseFloat(select5.options[select5.selectedIndex].value) + parseFloat(select6.options[select6.selectedIndex].value) + parseFloat(select7.options[select7.selectedIndex].value) + parseFloat(select8.options[select8.selectedIndex].value) + parseFloat(select9.options[select9.selectedIndex].value) + parseFloat(select10.options[select10.selectedIndex].value) + parseFloat(select11.options[select11.selectedIndex].value) + parseFloat(select12.options[select12.selectedIndex].value) + parseFloat(select13.options[select13.selectedIndex].value) + parseFloat(select14.options[select14.selectedIndex].value) + parseFloat(select15.options[select15.selectedIndex].value);
+
+
+       };
+
+
+
+
+
+       //The rest of the functions go here
+   </script>
+   <script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(101050272); }catch(e){}</script>
+
+</html>

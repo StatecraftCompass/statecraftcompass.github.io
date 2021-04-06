@@ -13,20 +13,28 @@
            padding-bottom: 5px;
        }
 
+       #textt{
+         font-family: "Uni Sans Heavy";
+         color: #839496;
+         font-size: 20px;
+       }
+
+
    </style>
 
-   <body>
-   <div class="row">
-       <div class="alert alert-primary col" role="alert">
-           <h4> Part 2/5 | Personal Freedoms  </h4>
-       </div>
-   </div><div class="row">
+   <body style = background-color:#36393F>
+
+     <center>
+     <img src="civ.png" alt="Political compass values" width = "15%">
+     </center>
+
+<div class="row">
        <div class="col-md"></div>
        <div id="main" class="col-sm-10 offset-sm-1 col-md-8">
            <!-- You already knows what goes here. !-->
 
        <div class="questions" id="que1">
-           <p>What type of firearms should responsible citizens have access to?</p>
+           <p id='textt'>What type of firearms should responsible citizens have access to?</p>
            <select class="custom-select" id="selector1">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
                <option value=-1>None</option>
@@ -38,7 +46,7 @@
 
        </div>
        <div class="questions" id="que2">
-           <p>How should hard drugs, such as cocaine, be regulated?</p>
+           <p id='textt'>How should hard drugs, such as cocaine, be regulated?</p>
            <select class="custom-select" id="selector2">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
                <option value=-1>Fully Illegal</option>
@@ -48,7 +56,7 @@
            </select>
        </div>
        <div class="questions" id="que3">
-           <p>How should prostitution be regulated?</p>
+           <p id='textt'>How should prostitution be regulated?</p>
            <select class="custom-select" id="selector3">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
                <option value=-1>Fully Illegal</option>
@@ -58,7 +66,7 @@
            </select>
        </div>
        <div class="questions" id="que4">
-           <p>How should vaccines be handled?</p>
+           <p id='textt'>How should vaccines be handled?</p>
 
            <select class="custom-select" id="selector4">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -69,7 +77,7 @@
            </select>
        </div>
        <div class="questions" id="que5">
-           <p>How should organ donation be handled after death?</p>
+           <p id='textt'>How should organ donation be handled after death?</p>
 
            <select class="custom-select" id="selector5">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -80,7 +88,7 @@
            </select>
        </div>
        <div class="questions" id="que6">
-           <p>Beyond government buldings, where should public surveillance (patrol officers and cameras) be positioned?</p>
+           <p id='textt'>Beyond government buldings, where should public surveillance (patrol officers and cameras) be positioned?</p>
 
            <select class="custom-select" id="selector6">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -91,7 +99,7 @@
            </select>
        </div>
        <div class="questions" id="que7">
-           <p>Who should be eligable to be wiretapped (electronically spied on without consent) by police?</p>
+           <p id='textt'>Who should be eligable to be wiretapped (electronically spied on without consent) by police?</p>
 
            <select class="custom-select" id="selector7">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -102,7 +110,7 @@
            </select>
        </div>
        <div class="questions" id="que8">
-           <p>What should the repercussions be for a murder witness who is intentionally being uncooperative with police detectives?</p>
+           <p id='textt'>What should the repercussions be for a murder witness who is intentionally being uncooperative with police detectives?</p>
 
            <select class="custom-select" id="selector8">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -113,7 +121,7 @@
            </select>
        </div>
        <div class="questions" id="que9">
-           <p>Until what age should classroom attendance be mandatory for children?</p>
+           <p id='textt'>Until what age should classroom attendance be mandatory for children?</p>
 
            <select class="custom-select" id="selector9">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -124,7 +132,7 @@
            </select>
        </div>
        <div class="questions" id="que10">
-           <p>Should a national school curriculum exist?</p>
+           <p id='textt'>Should a national school curriculum exist?</p>
 
            <select class="custom-select" id="selector10">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -135,7 +143,7 @@
            </select>
        </div>
        <div class="questions" id="que11">
-           <p>How should military service be handled?</p>
+           <p id='textt'>How should military service be handled?</p>
 
            <select class="custom-select" id="selector11">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -146,7 +154,7 @@
            </select>
        </div>
        <div class="questions" id="que12">
-           <p>When should curfews (martial law for terrorism, lockdowns for pandemics) be enacted?</p>
+           <p id='textt'>When should curfews (martial law for terrorism, lockdowns for pandemics) be enacted?</p>
 
            <select class="custom-select" id="selector12">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -156,8 +164,19 @@
 
            </select>
        </div>
+       <div class="questions" id="que16">
+           <p id='textt'>How should the nation respond to terrorist threats?</p>
+
+           <select class="custom-select" id="selector16">
+               <option selected="selected" value="0">[Neutral / Unsure]</option>
+               <option value=1>Weigh the severity of their threats to the cost of their demands, and then act accordingly </option>
+               <option value=0>Never negotiate</option>
+               <option value=-1>Never negotiate, and prevent third parties (ie the family members of hostages) from negotiating on their own</option>
+
+           </select>
+       </div>
        <div class="questions" id="que13">
-           <p>How should public burning of the national flag be dealt with?</p>
+           <p id='textt'>How should public burning of the national flag be dealt with?</p>
 
            <select class="custom-select" id="selector13">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -168,17 +187,17 @@
            </select>
        </div>
        <div class="questions" id="que14">
-           <p>How should advocacy of dangerous ideologies (fascism if you are leftwing, communism if you are rightwing) be handled by the government?</p>
+           <p id='textt'>How should advocacy of dangerous ideologies (fascism if you are leftwing, communism if you are rightwing) be handled by the government?</p>
 
            <select class="custom-select" id="selector14">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
                <option value=1>Uncensored</option>
                <option value=-0.5>Censored from political media (news networks and political candidates)</option>
-               <option value=-1>Censored from political media and peer-peer media (social media, university events, etc.)</option>
+               <option value=-1>Censored from political media and peer-peer media (social media, universities, etc.)</option>
            </select>
        </div>
        <div class="questions" id="que15">
-           <p>How should the spread of false facts, misinformation, and conspiracy theories from individuals or organizations with a significant following be handled by the government?</p>
+           <p id='textt'>How should the spread of false facts, misinformation, and conspiracy theories from individuals or organizations with a significant following be handled by the government?</p>
 
            <select class="custom-select" id="selector15">
                <option selected="selected" value="0">[Neutral / Unsure]</option>
@@ -190,7 +209,7 @@
        </div>
            <br>
            <div class="progress">
-               <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5">Page 2 of 5</div>
+               <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5">Page 2 of 4</div>
            </div>
            <br>
 
@@ -261,8 +280,9 @@
            var select13 = document.getElementById("selector13");
            var select14 = document.getElementById("selector14");
            var select15 = document.getElementById("selector15");
+           var select16 = document.getElementById("selector16");
 
-          return parseFloat(select.options[select.selectedIndex].value)+ parseFloat(select2.options[select2.selectedIndex].value) + parseFloat(select3.options[select3.selectedIndex].value) + parseFloat(select4.options[select4.selectedIndex].value) + parseFloat(select5.options[select5.selectedIndex].value) + parseFloat(select6.options[select6.selectedIndex].value) + parseFloat(select7.options[select7.selectedIndex].value) + parseFloat(select8.options[select8.selectedIndex].value) + parseFloat(select9.options[select9.selectedIndex].value) + parseFloat(select10.options[select10.selectedIndex].value) + parseFloat(select11.options[select11.selectedIndex].value) + parseFloat(select12.options[select12.selectedIndex].value) + parseFloat(select13.options[select13.selectedIndex].value) + parseFloat(select14.options[select14.selectedIndex].value) + parseFloat(select15.options[select15.selectedIndex].value);
+          return parseFloat(select.options[select.selectedIndex].value)+ parseFloat(select2.options[select2.selectedIndex].value) + parseFloat(select3.options[select3.selectedIndex].value) + parseFloat(select4.options[select4.selectedIndex].value) + parseFloat(select5.options[select5.selectedIndex].value) + parseFloat(select6.options[select6.selectedIndex].value) + parseFloat(select7.options[select7.selectedIndex].value) + parseFloat(select8.options[select8.selectedIndex].value) + parseFloat(select9.options[select9.selectedIndex].value) + parseFloat(select10.options[select10.selectedIndex].value) + parseFloat(select11.options[select11.selectedIndex].value) + parseFloat(select12.options[select12.selectedIndex].value) + parseFloat(select13.options[select13.selectedIndex].value) + parseFloat(select14.options[select14.selectedIndex].value) + parseFloat(select15.options[select15.selectedIndex].value)+ parseFloat(select16.options[select16.selectedIndex].value);
 
 
        };

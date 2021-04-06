@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,41 +16,14 @@
     //forgraph
     var getScoreCiv = sessionStorage.getItem('scoreCiv')
     var getScoreEcon = sessionStorage.getItem('scoreEcon')
-    var getScoreFor = sessionStorage.getItem('scoreFor')
     var getScoreCul = sessionStorage.getItem('scoreCul')
     var getScoreGov = sessionStorage.getItem('scoreGov')
-    //gov
-var intGov = Govfunction();
 
-
-    function Govfunction(){
-    if(getScoreGov == "Unknown"){
-    return parseInt(50);
-    }
-    if(getScoreGov == "Anarchy"){
-    return parseInt(20000000000);
-    }
-    if(getScoreGov == "Direct Democracy"){
-    return parseInt(0);
-    }
-    if(getScoreGov == "Equal Democracy"){
-    return parseInt(25);
-    }
-    if(getScoreGov == "Weighted Democracy"){
-    return parseInt(50);
-    }
-    if(getScoreGov == "Bureaucracy"){
-    return parseInt(75);
-    }
-    if(getScoreGov == "Monarchy"){
-    return parseInt(100);
-    }
-  }
     //forgraph
     var intCiv = parseInt(getScoreCiv);
     var intEcon = parseInt(getScoreEcon);
-    var intFor = parseInt(getScoreFor);
     var intCul = parseInt(getScoreCul);
+    var intGov = parseInt(getScoreGov);
 
     function start()
     {
@@ -69,139 +43,127 @@ var intGov = Govfunction();
         //meaning 'strongly agree' must be 17.333 for the numbers to go up
         //agree then becomes 8,666
         var can = document.getElementById("canvas")
-        var line = can.getContext("2d");
+        var ctx = can.getContext("2d");
 
-//Gov
-        line.beginPath();
-        line.moveTo(getGov(), 86);
-        line.lineTo(getGov(), 133);
-        line.lineWidth = 10;
-        line.strokeStyle = "red";
-        line.stroke();
+        //Autocracy
+        ctx.beginPath();
+        ctx.rect(257, 103, 427, 55);
+        ctx.fillStyle = "#837EBA";
+        ctx.fill();
 
-//Civ
-        line.beginPath();
-        line.moveTo(getCiv(), 186);
-        line.lineTo(getCiv(), 233);
-        line.lineWidth = 10;
-        line.strokeStyle = "red";
-        line.stroke();
+        //Security
+        ctx.beginPath();
+        ctx.rect(257, 249, 427, 55);
+        ctx.fillStyle = "#80AFDE";
+        ctx.fill();
 
-//Econ
-        line.beginPath();
-        line.moveTo(getEcon(), 287);
-        line.lineTo(getEcon(), 334);
-        line.lineWidth = 10;
-        line.strokeStyle = "red";
-        line.stroke();
+        //Competition
+        ctx.beginPath();
+        ctx.rect(257, 394, 427, 55);
+        ctx.fillStyle = "#A1C385";
+        ctx.fill();
 
-//For
-        line.beginPath();
-        line.moveTo(getFor(), 387);
-        line.lineTo(getFor(), 434);
-        line.lineWidth = 10;
-        line.strokeStyle = "red";
-        line.stroke();
+        //Tradition
+        ctx.beginPath();
+        ctx.rect(257, 543, 427, 55);
+        ctx.fillStyle = "#9C9C9D";
+        ctx.fill();
 
-//Cul
-        line.beginPath();
-        line.moveTo(getCul(), 489);
-        line.lineTo(getCul(), 536);
-        line.lineWidth = 10;
-        line.strokeStyle = "red";
-        line.stroke();
+        //Democracy
+        ctx.beginPath();
+        ctx.rect(254, 103, getGov(), 55);
+        ctx.fillStyle = "#F0D46D";
+        ctx.fill();
 
+        //Liberty
+        ctx.beginPath();
+        ctx.rect(254, 249, getCiv(), 55);
+        ctx.fillStyle = "#F2C182";
+        ctx.fill();
+
+        //Equality
+        ctx.beginPath();
+        ctx.rect(254, 394, getEcon(), 55);
+        ctx.fillStyle = "#C9736E";
+        ctx.fill();
+
+        //Progress
+        ctx.beginPath();
+        ctx.rect(254, 543, getCul(), 55);
+        ctx.fillStyle = "#F7F7F7";
+        ctx.fill();
+
+
+        ctx.font = "25px American Typewriter";
+        ctx.fillStyle = "#B39852";
+        ctx.fillText(getScoreGov, 267, 142);
+
+        ctx.font = "25px American Typewriter";
+        ctx.fillStyle = "#B39852";
+        ctx.fillText(getScoreGov, 267, 142);
+
+        ctx.font = "25px American Typewriter";
+        ctx.fillStyle = "#846C54";
+        ctx.fillText(getScoreCiv, 267, 288);
+
+        ctx.font = "25px American Typewriter";
+        ctx.fillStyle = "#834541";
+        ctx.fillText(100-getScoreEcon, 267, 434);
+
+        ctx.font = "25px American Typewriter";
+        ctx.fillStyle = "#737373";
+        ctx.fillText(getScoreCul, 267, 580);
+
+        ctx.font = "25px American Typewriter";
+        ctx.fillStyle = "#36393F";
+        ctx.fillText(100-getScoreCul, 625, 580);
+
+        ctx.font = "25px American Typewriter";
+        ctx.fillStyle = "#B39852";
+        ctx.fillText(getScoreGov, 267, 142);
+
+        ctx.font = "25px American Typewriter";
+        ctx.fillStyle = "#3F72A3";
+        ctx.fillText(100-getScoreCiv, 625, 288);
+
+        ctx.font = "25px American Typewriter";
+        ctx.fillStyle = "#576749";
+        ctx.fillText(getScoreEcon, 625, 434);
+
+        ctx.font = "25px American Typewriter";
+        ctx.fillStyle = "#605AA6";
+        ctx.fillText(100-getScoreGov, 625, 142);
 
 
 
 //for numbers
         document.getElementById('CivScore').innerHTML = sessionStorage.getItem('scoreCiv');
         document.getElementById('EconScore').innerHTML = sessionStorage.getItem('scoreEcon');
-        document.getElementById('ForScore').innerHTML = sessionStorage.getItem('scoreFor');
         document.getElementById('CulScore').innerHTML = sessionStorage.getItem('scoreCul');
         document.getElementById('GovScore').innerHTML = sessionStorage.getItem('scoreGov');
-
-        document.getElementById('CivScoreop').innerHTML = sessionStorage.getItem('scoreCivop');
-        document.getElementById('EconScoreop').innerHTML = sessionStorage.getItem('scoreEconop');
-        document.getElementById('ForScoreop').innerHTML = sessionStorage.getItem('scoreForop');
-        document.getElementById('CulScoreop').innerHTML = sessionStorage.getItem('scoreCulop');
-        document.getElementById('GovScoreop').innerHTML = sessionStorage.getItem('scoreGovop');
-
-
 
     }
     function getGov()
     {
 
-        return 496 + (intGov-50)*4.35;
+        return (intGov * 4.27);
     }
 
     function getCiv()
     {
 
-        return 496 + -(intCiv-50)*4.35;
+        return (intCiv * 4.27);
     }
     function getEcon()
     {
 
-        return 496 + -(intEcon-50)*4.35;
-    }
-    function getFor()
-    {
-
-        return 496 + -(intFor-50)*4.26;
+        return ((100-intEcon) * 4.27);
     }
     function getCul()
     {
 
-        return 496 + -(intCul-50)*4.26;
+        return (intCul * 4.27);
     }
-
-    function calcCiv(x){
-        var sum = x-445
-
-        sum = sum/26
-
-        sum = Math.round(sum*10)/10
-
-        sum = sum*(-1)
-
-        return sum
-    }
-    function calcEcon(x){
-        var sum = x-445
-
-        sum = sum/26
-
-        sum = Math.round(sum*10)/10
-
-        sum = sum*(-1)
-
-        return sum
-    }
-    function calcFor(x){
-        var sum = x-445
-
-        sum = sum/26
-
-        sum = Math.round(sum*10)/10
-
-        sum = sum
-
-        return sum
-    }
-    function calcCul(x){
-        var sum = x-445
-
-        sum = sum/26
-
-        sum = Math.round(sum*10)/10
-
-        sum = sum
-
-        return sum
-    }
-
 
      function createPara(text, id)
             //Very imporant function to reduce time wasted making paragraphs manually!
@@ -221,11 +183,11 @@ var intGov = Govfunction();
 
     #canvas {
         opacity: 1;
-        background-image: url("poltiicalcompasssmall2.png");
+        background-image: url("politicalcompass.png");
         background-size: contain;
-        width: 100%;
-        max-width: 1000px;
-        max-height: 658px;
+        width: 120%;
+        max-width: 1240px;
+        max-height: 900px;
     }
 
 
@@ -268,63 +230,241 @@ var intGov = Govfunction();
         display: inline;
     }
 
+    #bestSystem{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+    }
+    #worstSystem{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+    }
+    #description{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+    }
+    #baddescription{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+    }
+    #ideoheader{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+    }
+    #resultspage{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+    }
+    #github{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+    }
+
 </style>
 
-<body>
+<body style = background-color:black>
 <div class="container">
-<div class="jumbotron">
-    <h3 class="display-4">Your results:</h3>
+<div class="jumbotron" style = background-color:#36393F>
+    <h3 class="display-4" id='resultspage'>Your results:</h3>
     <div class="row">
         <div class="col-lg-8"><canvas id="canvas" height="658" width="1000"></canvas></div>
-    <div id='scores'>
-        <h2><span id='GovScore'></span></h2><br>
-        <p id='xValue'>Liberty:    <span id='CivScore'></span> %</p><br>
-        <p id='xValue'>Competition:    <span id='EconScore'></span> %</p><br>
-        <p id='xValue'>Globe: <span id="ForScore"></span> %</p><br>
-        <p id='xValue'>Progress:  <span id="CulScore"></span> %</p>
-        <p></p>
-        <p id='xValue'>Security:    <span id='CivScoreop'></span> %</p><br>
-        <p id='xValue'>Equality:    <span id='EconScoreop'></span> %</p><br>
-        <p id='xValue'>Nation: <span id="ForScoreop"></span> %</p><br>
-        <p id='xValue'>Tradition:  <span id="CulScoreop"></span> %</p>
-    </div></div>
+      </div>
 
-    <div id='github'>statecraftcompass.github.io
+    <div><h1 id ="ideoheader">Your closest ideology:</h1><br>
     </div>
+    <h5 id='bestSystem'></h5>
+    <div>
+    </div>
+    <p id='description' ></p><br>
+
+    <div><h1 id="ideoheader">Your furthest ideology:</h1><br>
+    </div>
+    <h5 id='worstSystem'></h5>
+    <div>
+    </div>
+    <p id='baddescription' ></p><br>
+    <div>
+    <div id='github'>statecraftcompass.github.io
+    </div><br>
+
+
+
 </div>
 
-<h2>What do these results mean?</h2>
-    <p>There are five independent axes - Government, Civil Liberties, Economy, Foreign Relations, and Culture - Each has two opposing values assigned to them. They are:</p>
-    <p class="value-description"><b style="color:green;">Democracy</b> (Government)<br/>
-        Those with higher Democracy scores believe citizens should have a right to determine the policies or members of their government.</p>
-    <p class="value-description"><b style="color:red;">Dictatorship</b> (Government)<br/>
-        Those with higher Dictatorship scores believe governance should be left in the hands of professionals who know what they are doing rather than the public</p>
-    <p class="value-description"><b style="color:green;">Liberty</b> (Civil liberties)<br/>
-        Those with higher Liberty scores believe that the free will of individuals should be protected from the interests of the state</br>
-        They tend to support legalization of guns/drugs, privacy, free speech, decentralized education, and consent between the state and individuals
-    <p class="value-description"><b style="color:red;">Security</b> (Civil liberties)<br/>
-        Those with higher Security scores believe that individuals should sacrifice their own liberties for the collective wellbeing of the state</br>
-        They tend to support law & order, surveillance, censorship, centralized education, and social obligation such as mandatory vaccination or military service.
-    <p class="value-description"><b style="color:green;">Competition</b> (Economy)<br/>
-        Those with higher Competition scores believe in an unrestricted economy where hard-work and good ideas result in higher profits</br>
-        They tend to support low taxes, deregulation, private business, free markets, and class mobility
-    <p class="value-description"><b style="color:red;">Equality</b> (Economy)<br/>
-        Those with higher Equality scores believe in a restricted economy where the wealthy must sacrifice profit-potential to provide for their workers and consumers</br>
-        They tend to support high taxes, regulation, public services, unions, and redistribution of wealth.
-    <p class="value-description"><b style="color:green;">Globe</b> (Foreign Relations)<br/>
-        Those with higher Globe scores believe their country should collaborate with others to benefit the world as a whole.</br>
-        They tend to support loose borders, small military, free trade, global cooperation, and peaceful relations.
-    <p class="value-description"><b style="color:red;">Nation</b> (Foreign Relations)<br/>
-        Those with higher Nation scores believe their country should pursue their own interests, even at the expense of other nations.</br>
-        They tend to support strong borders, strong military, protectionism, national independance, and imperialism.
-    <p class="value-description"><b style="color:green;">Progress</b> (Culture)<br/>
-        Those with higher Progress scores believe their society should be open and tolerant to new ideas and other cultures.</br>
-        They tend to support multiculturalism, LGBT, rehabilitative justice, pro-choice, atheism, and a warm compassionate citizenry.
-    <p class="value-description"><b style="color:red;">Tradition</b> (Culture)<br/>
-        Those with higher Tradition scores believe their society should maintain a strong coherent culture.</br>
-        They tend to support monoculturalism, family values, punitive justice, pro-life, religion, and a strong thick-skinned citizenry
-</div>
+<script>
 
+if(getScoreGov < 50 && getScoreCiv <= 50 && getScoreEcon < 50 && getScoreCul < 50){
+document.getElementById('bestSystem').innerHTML = "National Bolshevism";
+document.getElementById('description').innerHTML = "A nation's population is defined by its ancestral working class. Through the power of a strong state, a dictator will ensure that all outsiders, minority groups, and white collar elites will serve the ancestral working class";
+
+}
+if(getScoreGov < 50 && getScoreCiv <= 50 && getScoreEcon >= 50 && getScoreCul < 50){
+document.getElementById('bestSystem').innerHTML = "Fascism";
+document.getElementById('description').innerHTML = "A nation should strive to be as strong and powerful as possible. Through a competetive economy, strict social laws, centralized government, and an ethno-religiously homogenous population, all citizens will be strong as individuals and even stronger as a united country";
+
+}
+if(getScoreGov < 50 && getScoreCiv <= 50 && getScoreEcon < 50 && getScoreCul >= 50){
+document.getElementById('bestSystem').innerHTML = "Communism";
+document.getElementById('description').innerHTML = "The fundamental problem of society is the class conflict between the rich and poor. All other conflicts such as race and religion were artificially created to distract from class conflict. Through a revolutionary dictatorship, the rich will be purged and class will be abolished";
+
+}
+if(getScoreGov < 50 && getScoreCiv <= 50 && getScoreEcon >= 50 && getScoreCul >= 50){
+document.getElementById('bestSystem').innerHTML = "State Capitalism";
+document.getElementById('description').innerHTML = "Economic efficiency should be the primary goal of a nation. Freedom and culture should come second to the demands of the economy. A strong state should work intandem with capitalism to prioritize growth, which will allow its citizens to prosper in the long term.";
+
+}
+if(getScoreGov >= 50 && getScoreCiv > 50 && getScoreEcon >= 50 && getScoreCul >= 50){
+document.getElementById('bestSystem').innerHTML = "Individualism";
+document.getElementById('description').innerHTML = "The freedoms and desires of the individual supersede any collective responsability. The government should regulate personal life and the economy as little as possible, and society should respect those who diverge from the status quo";
+
+}
+if(getScoreGov >= 50 && getScoreCiv > 50 && getScoreEcon >= 50 && getScoreCul < 50){
+document.getElementById('bestSystem').innerHTML = "Paleolibertarianism";
+document.getElementById('description').innerHTML = "The world has clearly defined winners and losers, but it is not the role of the state to decide either. The government should refrain from regulating personal or economic life, for society will naturally uphold social standards on their own";
+
+}
+if(getScoreGov >= 50 && getScoreCiv > 50 && getScoreEcon < 50 && getScoreCul >= 50){
+document.getElementById('bestSystem').innerHTML = "Liberalism";
+document.getElementById('description').innerHTML = "Everyone deserves to pursue their goals without fear of extreme poverty, state intervention, or radical cultural pressure. The state should not exist to exert control over people, but instead to provide services and safety net for those in need and the community at large";
+
+}
+if(getScoreGov >= 50 && getScoreCiv <= 50 && getScoreEcon < 50 && getScoreCul >= 50){
+document.getElementById('bestSystem').innerHTML = "Leftwing Populism";
+document.getElementById('description').innerHTML = "The best society is one where all groups are tolerated and everyone is provided for. To achieve this, society must take a hardline stance against those who are intolerant or consumed by selfishness by purging far-right radicals, terrorists, criminals, and greedy corporate officials";
+
+}
+if(getScoreGov < 50 && getScoreCiv > 50 && getScoreEcon >= 50 && getScoreCul >= 50){
+document.getElementById('bestSystem').innerHTML = "Benevolent Dictatorship";
+document.getElementById('description').innerHTML = "While many view democracy as a way to uphold freedom, it is too unstable to do so consistently. To ensure freedom truly exists indefinitely, society will be led by a small group of likeminded noblemen who abide by a constitution";
+
+}
+if(getScoreGov >= 50 && getScoreCiv <= 50 && getScoreEcon >= 50 && getScoreCul < 50){
+document.getElementById('bestSystem').innerHTML = "Neoconservatism";
+document.getElementById('description').innerHTML = "Every citizen, so long as they adopt their nation's morals and culture, should be safe, and given opportunity to further their social status. Strong policing and strict social standards ensure that those who don't assimilate will fail, while free markets and democracy ensure that those who do will thrive";
+
+}
+if(getScoreGov >= 50 && getScoreCiv <= 50 && getScoreEcon < 50 && getScoreCul < 50){
+document.getElementById('bestSystem').innerHTML = "Paleoconservatism";
+document.getElementById('description').innerHTML = "A nation's population is defined by its ancestral working class, which is at risk of suppression by liberalism, globalism, and unregulated capitalism. The ancestral workers must therefor band together to prioritize their own needs through the confines of democracy and activism";
+
+}
+if(getScoreGov < 50 && getScoreCiv > 50 && getScoreEcon >= 50 && getScoreCul < 50){
+document.getElementById('bestSystem').innerHTML = "Monarcho Libertarianism";
+document.getElementById('description').innerHTML = "While many view democracy as a way to uphold freedom, it divides people into competing factions which gradually leads to chaos and exploitation by foreign powers. A stable libertarian monarchy will ensure that both the economic and personal freedoms of its citizens are protected, while uniting the population under a common single banner";
+
+}
+if(getScoreGov < 50 && getScoreCiv > 50 && getScoreEcon < 50 && getScoreCul < 50){
+document.getElementById('bestSystem').innerHTML = "Theocracy";
+document.getElementById('description').innerHTML = "Society should conform to the needs of wise elders and religious authorities, as they are the ones most suited for power"
+}
+if(getScoreGov < 50 && getScoreCiv > 50 && getScoreEcon < 50 && getScoreCul >= 50){
+document.getElementById('bestSystem').innerHTML = "Technocracy";
+document.getElementById('description').innerHTML = "Society should conform to the needs of academics and scientists, as they are the ones most suited for power"
+}
+if(getScoreGov >= 50 && getScoreCiv <= 50 && getScoreEcon >= 50 && getScoreCul >= 50){
+document.getElementById('bestSystem').innerHTML = "New World Order";
+document.getElementById('description').innerHTML = "While neoliberal democracy was the best existing system: the rise of terrorism, pandemics, and environmental crisis have shown us that certain levels of authoritarianism are needed to protect our safety";
+
+}
+if(getScoreGov >= 50 && getScoreCiv > 50 && getScoreEcon < 50 && getScoreCul < 50){
+document.getElementById('bestSystem').innerHTML = "Rightwing Populism";
+document.getElementById('description').innerHTML = "Every citizen, so long as they adopt their nation's morals and culture, should be free to do what they want without risk of severe poverty or state intervention in their personal lives. The grass roots of civilization should remain united against government bureaucrats, greedy businessmen, foreign interests, and radical activists";
+
+}
+if(getScoreGov == "Anarchy"){
+document.getElementById('bestSystem').innerHTML = "Anarchism";
+document.getElementById('description').innerHTML = "Morally, there is no difference between a democracy or an autocracy. The existance of a state will always be immoral because it uses force to impose theft and violence against its citizens. The best society would be one with no state, where every decision is made through voluntary transactions.";
+
+}
+
+//baddescription
+
+if(100-getScoreGov <= 50 && 100-getScoreCiv < 50 && 100-getScoreEcon <= 50 && 100-getScoreCul <= 50){
+document.getElementById('worstSystem').innerHTML = "National Bolshevism";
+document.getElementById('baddescription').innerHTML = "A nation's population is defined by its ancestral working class. Through the power of a strong state, a dictator will ensure that all outsiders, minority groups, and white collar elites will serve the ancestral working class";
+
+}
+if(100-getScoreGov <= 50 && 100-getScoreCiv < 50 && 100-getScoreEcon > 50 && 100-getScoreCul <= 50){
+document.getElementById('worstSystem').innerHTML = "Fascism";
+document.getElementById('baddescription').innerHTML = "A nation should strive to be as strong and powerful as possible. Through a competetive economy, strict social laws, centralized government, and an ethno-religiously homogenous population, all citizens will be strong as individuals and even stronger as a united country";
+
+}
+if(100-getScoreGov <= 50 && 100-getScoreCiv < 50 && 100-getScoreEcon <= 50 && 100-getScoreCul > 50){
+document.getElementById('worstSystem').innerHTML = "Communism";
+document.getElementById('baddescription').innerHTML = "The fundamental problem of society is the class conflict between the rich and poor. All other conflicts such as race and religion were artificially created to distract from class conflict. Through a revolutionary dictatorship, the rich will be purged and class will be abolished";
+
+}
+if(100-getScoreGov <= 50 && 100-getScoreCiv < 50 && 100-getScoreEcon > 50 && 100-getScoreCul > 50){
+document.getElementById('worstSystem').innerHTML = "State Capitalism";
+document.getElementById('baddescription').innerHTML = "Economic efficiency should be the primary goal of a nation. Freedom and culture should come second to the demands of the economy. A strong state should work intandem with capitalism to prioritize growth, which will allow its citizens to prosper in the long term.";
+
+}
+if(100-getScoreGov > 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon > 50 && 100-getScoreCul > 50){
+document.getElementById('worstSystem').innerHTML = "Individualism";
+document.getElementById('baddescription').innerHTML = "The freedoms and desires of the individual supersede any collective responsability. The government should regulate personal life and the economy as little as possible, and society should respect those who diverge from the status quo";
+
+}
+if(100-getScoreGov > 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon > 50 && 100-getScoreCul <= 50){
+document.getElementById('worstSystem').innerHTML = "Paleolibertarianism";
+document.getElementById('baddescription').innerHTML = "The world has clearly defined winners and losers, but it is not the role of the state to decide either. The government should refrain from regulating personal or economic life, for society will naturally uphold social standards on their own";
+
+}
+if(100-getScoreGov > 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon <= 50 && 100-getScoreCul > 50){
+document.getElementById('worstSystem').innerHTML = "Liberalism";
+document.getElementById('baddescription').innerHTML = "Everyone deserves to pursue their goals without fear of extreme poverty, state intervention, or radical cultural pressure. The state should not exist to exert control over people, but instead to provide services and safety net for those in need and the community at large";
+
+}
+if(100-getScoreGov > 50 && 100-getScoreCiv < 50 && 100-getScoreEcon <= 50 && 100-getScoreCul > 50){
+document.getElementById('worstSystem').innerHTML = "LeftWing Populism";
+document.getElementById('baddescription').innerHTML = "The best society is one where all groups are tolerated and everyone is provided for. To achieve this, society must take a hardline stance against those who are intolerant or consumed by selfishness by purging far-right radicals, terrorists, criminals, and greedy corporate officials";
+
+}
+if(100-getScoreGov <= 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon > 50 && 100-getScoreCul > 50){
+document.getElementById('worstSystem').innerHTML = "Benevolent Dictatorship";
+document.getElementById('baddescription').innerHTML = "While many view democracy as a way to uphold freedom, it is too unstable to do so consistently. To ensure freedom truly exists indefinitely, society will be led by a small group of likeminded noblemen who abide by a constitution";
+
+}
+if(100-getScoreGov > 50 && 100-getScoreCiv < 50 && 100-getScoreEcon > 50 && 100-getScoreCul <= 50){
+document.getElementById('worstSystem').innerHTML = "Neoconservatism";
+document.getElementById('baddescription').innerHTML = "Every citizen, so long as they adopt their nation's morals and culture, should be safe, and given opportunity to further their social status. Strong policing and strict social standards ensure that those who don't assimilate will fail, while free markets and democracy ensure that those who do will thrive";
+
+}
+if(100-getScoreGov > 50 && 100-getScoreCiv < 50 && 100-getScoreEcon <= 50 && 100-getScoreCul <= 50){
+document.getElementById('worstSystem').innerHTML = "Paleoconservatism";
+document.getElementById('baddescription').innerHTML = "A nation's population is defined by its ancestral working class, which is at risk of suppression by liberalism, globalism, and unregulated capitalism. The ancestral workers must therefor band together to prioritize their own needs through the confines of democracy and activism";
+
+}
+if(100-getScoreGov <= 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon > 50 && 100-getScoreCul <= 50){
+document.getElementById('worstSystem').innerHTML = "Monarcho Libertarianism";
+document.getElementById('baddescription').innerHTML = "While many view democracy as a way to uphold freedom, it divides people into competing factions which gradually leads to chaos and exploitation by foreign powers. A stable libertarian monarchy will ensure that both the economic and personal freedoms of its citizens are protected, while uniting the population under a common single banner";
+
+}
+if(100-getScoreGov <= 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon <= 50 && 100-getScoreCul <= 50){
+document.getElementById('worstSystem').innerHTML = "Theocracy";
+document.getElementById('baddescription').innerHTML = "Society should conform to the needs of wise elders and religious authorities, as they are the ones most suited for power"
+}
+if(100-getScoreGov <= 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon <= 50 && 100-getScoreCul > 50){
+document.getElementById('worstSystem').innerHTML = "Technocracy";
+document.getElementById('baddescription').innerHTML = "Society should conform to the needs of academics and scientists, as they are the ones most suited for power"
+}
+if(100-getScoreGov > 50 && 100-getScoreCiv < 50 && 100-getScoreEcon > 50 && 100-getScoreCul > 50){
+document.getElementById('worstSystem').innerHTML = "New World Order";
+document.getElementById('baddescription').innerHTML = "While neoliberal democracy was the best existing system: the rise of terrorism, pandemics, and environmental crisis have shown us that certain levels of authoritarianism are needed to protect our safety";
+
+}
+if(100-getScoreGov > 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon <= 50 && 100-getScoreCul <= 50){
+document.getElementById('worstSystem').innerHTML = "Rightwing Populism";
+document.getElementById('baddescription').innerHTML = "Every citizen, so long as they adopt their nation's morals and culture, should be free to do what they want without risk of severe poverty or state intervention in their personal lives. The grass roots of civilization should remain united against government bureaucrats, greedy businessmen, foreign interests, and radical activists";
+
+}
+if(getScoreGov == "Anarchy"){
+document.getElementById('worstSystem').innerHTML = "Totalitarianism";
+document.getElementById('baddescription').innerHTML = "Power is not a means, but an end. Society functions best when every citizen has their life planned down to the detail by an oppressive insurmountable government. The goal of this government does not matter so long as all citizens obey its authority, as it is the role of all people to serve as a cog in the machine";
+
+}
+
+</script>
 
 </body>
+
+
 </html>
